@@ -35,6 +35,18 @@ describe('My Login application', () => {
 
         const sizeButton = await $('//button[contains(text(), "M")]');
         await sizeButton.click();
+        const filePath = '/Users/Durjoy/Downloads/images.png'
+        const remoteFilePath = await browser.uploadFile(filePath)
+    
+        await $('#main-image').setValue(remoteFilePath)
+
+        const sndFilePath = '/Users/Durjoy/Downloads/images.png'
+        const sndRemoteFilePath = await browser.uploadFile(sndFilePath);
+        await $('#product-image-0').setValue(sndRemoteFilePath);
+        await $('#color-name-0').setValue('Black');
+        await $('button[type="submit"]').click();
+
+        // await $('#main-image').click()
 
         await browser.pause(5000);
 
