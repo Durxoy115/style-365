@@ -30,6 +30,12 @@ describe('My Login application', () => {
         await skuInput.setValue('p-3894');
         const quantityInput = await $('#total-qty');
         await quantityInput.setValue('4');
+        const productInfo = await $('#product-info');
+        await productInfo.setValue("Ths is product info");
+
+        const sizeButton = await $('//button[contains(text(), "M")]');
+        await sizeButton.click();
+
         await browser.pause(5000);
 
 
