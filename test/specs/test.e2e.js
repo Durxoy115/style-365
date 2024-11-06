@@ -49,6 +49,6 @@ describe('My Login application - Add Product Workflow', () => {
         const returnOrRefund = await $('p.ps-2.ps-md-3.text-start');
         await returnOrRefund.waitForDisplayed();
         await returnOrRefund.click();
-        await browser.pause(5000); // Wait for 5 seconds
+        await browser.pause(56000); // Wait for 6 seconds
     });
 });
